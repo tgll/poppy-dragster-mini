@@ -9,7 +9,7 @@ use <raspberry-scad/raspberry_pi_Bplus_tools.scad>
 
 use <MCAD/rotate.scad>
 
-module poppy_dragster_jr(){
+module poppy_dragster_mini(){
 
     translate([0, - RaspberryPiBplusWidth/2 - RaspberryPiBplusFrameDistanceBoardToMotor - MotorLength + MotorAxisOffset, -MotorHeight/2-ollo_segment_thickness(1)]) {
 
@@ -39,5 +39,5 @@ echo("##########");
 
 p = 1;
 if (p==1) {
-  poppy_dragster_jr();
+  poppy_dragster_mini();
 }
