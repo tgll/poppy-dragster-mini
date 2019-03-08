@@ -4,10 +4,38 @@ from pypot.primitive.utils import SimplePosture, Sinus
 
 class BasePosture(SimplePosture):
     @property
+    def leds(self):
+        return {m: 'pink' for m in self.robot.motors}
+    
+    @property
     def target_position(self):
-        return {m.name: 0. for m in self.robot.motors}
+        return {
+            'm1': 0.,
+            'm2': 0.,
+            'm3': 0.,
+            'm4': 0.,
+            'm5': 0.,
+            'm6': 0.,
+        }
 
-
+    
+class CompactPosture(SimplePosture):
+    @property
+    def leds(self):
+        return {m: 'blue' for m in self.robot.motors}
+    
+    @property
+    def target_position(self):
+        return {
+            'm1': 0.,
+            'm2': 0.,
+            'm3': 0.,
+            'm4': 90.,
+            'm5': -70.,
+            'm6': 0.,
+        }  
+    
+    
 class RestPosture(SimplePosture):
     @property
     def leds(self):
@@ -24,37 +52,6 @@ class RestPosture(SimplePosture):
             'm6': -5.,
         }
 
-class CuriousPosture(SimplePosture):
-    @property
-    def target_position(self):
-        return {
-            'm1': 0.,
-            'm2': -15.,
-            'm3': 40.,
-            'm4': 0.,
-            'm5': -35.,
-            'm6': -60.
-        }
-
-    @property
-    def leds(self):
-        return {m: 'pink' for m in self.robot.motors}
-
-class TetrisPosture(SimplePosture):
-    @property
-    def target_position(self):
-        return {
-            'm1': 0.,
-            'm2': -90.,
-            'm3': 90.,
-            'm4': 0.,
-            'm5': -90.,
-            'm6': -90.
-        }
-
-    @property
-    def leds(self):
-        return {m: 'yellow' for m in self.robot.motors}
 
 class IdlePosture(SimplePosture):
     @property
