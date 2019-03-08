@@ -1,0 +1,96 @@
+{
+  "controllers": {
+    "my_dxl_controller": {
+      "sync_read": true,
+      "protocol": 2,
+      "attached_motors": [
+        "motor",
+        "wheel"
+      ],
+      "port": "/dev/ttyAMA0",
+      "syncloop": "LightDxlController"
+    }
+  },
+  "motorgroups": {
+    "joint": [
+      "m1",
+      "m2",
+      "m3",
+      "m4", 
+    ],
+    "wheel": [
+      "wr",
+      "wl",
+    ]
+  },
+  "motors": {
+    "w1": {
+      "offset": 0.0,
+      "type": "XL-320",
+      "id": 1,
+      "wheel_mode" : true,
+      "orientation": "direct"
+    },
+    "wr": {
+      "offset": 0.0,
+      "type": "XL-320",
+      "id": 2,
+      "wheel_mode" : true,
+      "orientation": "indirect"
+    },
+    "m1": {
+      "offset": 0.0,
+      "type": "XL-320",
+      "id": 3,
+      "angle_limit": [
+        -90.0,
+        90.0
+      ],
+      "orientation": "indirect"
+    },
+    "m2": {
+      "offset": 0.0,
+      "type": "XL-320",
+      "id": 4,
+      "angle_limit": [
+        -90.0,
+        90.0
+      ],
+      "orientation": "direct"
+    },
+    "m3": {
+      "offset": 0.0,
+      "type": "XL-320",
+      "id": 5,
+      "angle_limit": [
+        -90.0,
+        90.0
+      ],
+      "orientation": "indirect"
+    },
+    "m4": {
+      "offset": 0.0,
+      "type": "XL-320",
+      "id": 6,
+      "angle_limit": [
+        -90.0,
+        90.0
+      ],
+      "orientation": "indirect"
+    }
+  },
+  "sensors": {
+    "camera": {
+      "type": "OpenCVCamera",
+      "index": -1,
+      "fps": 20.0,
+      "resolution": [640, 480]
+    },
+    "marker_detector": {
+      "type": "MarkerDetector",
+      "cameras": ["camera"],
+      "freq": 1.0,
+      "need_robot": true
+    }
+  }
+}
