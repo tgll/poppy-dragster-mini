@@ -4,7 +4,7 @@
       "sync_read": true,
       "protocol": 2,
       "attached_motors": [
-        "motor",
+        "joint",
         "wheel"
       ],
       "port": "/dev/ttyAMA0",
@@ -16,29 +16,35 @@
       "m1",
       "m2",
       "m3",
-      "m4", 
+      "m4"
     ],
     "wheel": [
-      "wr",
-      "wl",
+      "w1",
+      "w2"
     ]
   },
   "motors": {
-    "w1": {
+    "m1": {
       "offset": 0.0,
       "type": "XL-320",
       "id": 1,
-      "wheel_mode" : true,
+      "angle_limit": [
+        -90.0,
+        90.0
+      ],
       "orientation": "direct"
     },
-    "wr": {
+    "m2": {
       "offset": 0.0,
       "type": "XL-320",
       "id": 2,
-      "wheel_mode" : true,
+      "angle_limit": [
+        -90.0,
+        90.0
+      ],
       "orientation": "indirect"
     },
-    "m1": {
+    "m3": {
       "offset": 0.0,
       "type": "XL-320",
       "id": 3,
@@ -48,7 +54,7 @@
       ],
       "orientation": "indirect"
     },
-    "m2": {
+    "m4": {
       "offset": 0.0,
       "type": "XL-320",
       "id": 4,
@@ -58,24 +64,18 @@
       ],
       "orientation": "direct"
     },
-    "m3": {
+    "w1": {
       "offset": 0.0,
       "type": "XL-320",
       "id": 5,
-      "angle_limit": [
-        -90.0,
-        90.0
-      ],
-      "orientation": "indirect"
+      "wheel_mode" : true,
+      "orientation": "direct"
     },
-    "m4": {
+    "w2": {
       "offset": 0.0,
       "type": "XL-320",
       "id": 6,
-      "angle_limit": [
-        -90.0,
-        90.0
-      ],
+      "wheel_mode" : true,
       "orientation": "indirect"
     }
   },
