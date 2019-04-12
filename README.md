@@ -1,8 +1,8 @@
 # poppy-dragster-mini
 
-A 2 wheel drive base that can hold a poppy-ergo-mini or a poppy-4dof-arm-mini.
+Poppy Dragster mini is a educational robot based on a Poppy Ergo Jr that comes in the form of a small robotic arm with 4 degrees of freedom mounted on a pedestal with two wheels. The plastic parts can be 3D printed.
 
-![IMG View](doc/img/poppy_dragster_mini.png)
+![IMG View](doc/img/Dragsterfinal.jpg)
 
 [STL View >>](doc/stl/poppy_dragster_mini.stl)
 
